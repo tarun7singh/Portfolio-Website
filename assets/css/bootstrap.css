@@ -200,7 +200,14 @@ h5 .small,
 h6 .small,
 .h6 .small{font-size:75%;}
 h1,
-.h1{font-size:36px;}
+.h1{
+	font-size: 80px;
+	color: #FFF;
+	font-style: normal;
+	font-weight: bold;
+	height: auto;
+	width: auto;
+}
 h2,
 .h2{font-size:30px;}
 h3,
