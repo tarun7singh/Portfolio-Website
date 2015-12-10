@@ -12,9 +12,7 @@ a:focus{
 	color:#E56;
 	
 }
-.active{
-	border-bottom:2px solid black;
-}
+
 .navbar-custom{
 	font-weight: bold;
 	font-size: 18px;
