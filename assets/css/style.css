@@ -1,6 +1,6 @@
 body{
 	position:relative;
-	font-family: Geneva, sans-serif;
+	font-family: 'Raleway', Geneva, sans-serif;
 	background-color:#111;
 }
 a{
@@ -12,9 +12,13 @@ a:focus{
 	color:#E56;
 	
 }
+h1{
+	font-family:'Quicksand','sans-serif';
+	font-weight:300;
+}
 
-.navbar-custom{
-	font-weight: bold;
+
+.navbar-custom{	
 	font-size: 18px;
 	}
 #headerwrap{
@@ -27,6 +31,10 @@ a:focus{
 	background-position:center center;
 	min-height:660px;
 	width:100%;
+}
+#button{
+	font-size:50px;
+	color:#E56;
 }
 #about{
 	color: white;
