@@ -29,7 +29,7 @@ h1{
 	text-align:center;
 	background-attachment:relative;
 	background-position:center center;
-	min-height:660px;
+	height:100%;
 	width:100%;
 }
 #button{
