@@ -1,0 +1,71 @@
+<html>
+<header>
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</header>
+<body>
+<section>
+    <div id="countdown">
+      <div class="cd-box">
+        <p id ="days" class="numbers days">00</p><br>
+        <p class="strings timeRefDays">Days</p>
+      </div>
+      <div class="cd-box">
+        <p id ="hours" class="numbers hours">00</p><br>
+        <p class="strings timeRefHours">Hours</p>
+      </div>
+      <div class="cd-box">
+        <p id ="minutes" class="numbers minutes">00</p><br>
+        <p class="strings timeRefMinutes">Minutes</p>
+      </div>
+      <div class="cd-box">
+        <p id ="seconds" class="numbers seconds">00</p><br>
+        <p class="strings timeRefSeconds">Seconds</p>
+      </div>
+    </div>
+    <!-- end div#countdown -->
+  <!-- end div.wrapper -->
+  <p id="type"></p>
+
+</section>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+<script src="main.js"></script>
+<script>$('#type').typeIt({
+     speed: 120,
+     autoStart: true,
+     lifeLike: true
+})
+.tiType('Hey <strong>Hridu...</strong> *kiss* *kiss*')
+.tiPause(1000)
+.tiBreak()
+.tiType('So you might be wondering. what above counter is for.')
+.tiBreak()
+.tiPause(500)
+.tiType('So try guessing what it is for? Let\'s give you 5 seconds to guess')
+.tiSettings({speed: 1})
+.tiPause(1000)
+.tiType('.')
+.tiPause(1000)
+.tiType('.')
+.tiPause(1000)
+.tiType('.')
+.tiPause(1000)
+.tiType('.')
+.tiPause(1000)
+.tiType('.')
+.tiPause(1000)
+.tiSettings({speed: 120})
+.tiDelete(71)
+.tiBreak()
+.tiType('So this counter "is" and "will" be counting time since we started talking.')
+.tiBreak()
+.tiType('I\'m sure that you liked it. so tell me about it in chats. I spent approx 3-4 hours designing it.')
+.tiBreak()
+.tiType('And current smile on your face made it, totally worth it')
+//.tiDelete()
+//.tiType('IS THAT SO <strong>WRONG??</strong>');
+</script>
+</body>
+</html>
