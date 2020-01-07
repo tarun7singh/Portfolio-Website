@@ -2487,3 +2487,7 @@ select.mobile-device {
 #social a{
     color: white;
 }
+
+#social a:hover{
+    color: #333333;
+}
