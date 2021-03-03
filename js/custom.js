@@ -83,7 +83,7 @@
 
   // Banner
   $(".heading").height($(window).height());
-  $(".parallaxie").parallaxie();
+  // $(".parallaxie").parallaxie();
 
   // LOADER
   $(window).load(function() {
@@ -95,22 +95,4 @@
       .fadeOut("slow");
   });
 
-  // Gallery Filter
-  var Container = $(".container");
-  Container.imagesLoaded(function() {
-    var portfolio = $(".gallery-menu");
-    portfolio.on("click", "button", function() {
-      $(this)
-        .addClass("active")
-        .siblings()
-        .removeClass("active");
-      var filterValue = $(this).attr("data-filter");
-      $grid.isotope({
-        filter: filterValue
-      });
-    });
-    var $grid = $(".gallery-list").isotope({
-      itemSelector: ".gallery-grid"
-    });
-  });
 })(jQuery);
