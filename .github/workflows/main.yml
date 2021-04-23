@@ -1,0 +1,20 @@
+name: Deploy
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Copy files via scp
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ${{ secrets.ORACLE_HOST }}
+        USERNAME: ${{ secrets.ORACLE_USERNAME }}
+        PORT: ${{ secrets.ORACLE_VM_PORT }}
+        KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
+      with:
+        source: "*"
+        target: "/home/opc/portfolio"
