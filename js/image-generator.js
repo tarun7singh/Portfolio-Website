@@ -13,7 +13,7 @@ function getPalette() {
   function reload() {
     document.querySelector(".but1").className += " loading";
     document.querySelector("button").className += " disabled";
-    fetch("https://motivate-app.herokuapp.com/image", {
+    fetch("https://api.tarunsingh.dev/image-generator/image", {
       cache: "no-cache"
     })
       .then(function(res) {
