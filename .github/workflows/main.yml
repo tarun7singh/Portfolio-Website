@@ -17,4 +17,4 @@ jobs:
         KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
       with:
         source: "*"
-        target: "/home/opc/portfolio"
+        target: "/home/ubuntu/portfolio"
