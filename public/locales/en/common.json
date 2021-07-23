@@ -1,0 +1,47 @@
+{
+  "headTitle": "Home | ironsoul",
+  "hero": {
+    "title": "Hi, I'm Tarun!",
+    "p0": "Full-stack web developer",
+    "p1": "Currently Full Stack developer",
+    "p2": "Previously",
+    "des0": "I am a rising junior at Nazarbayev University majoring in CS.",
+    "des1": "I enjoy creating high-quality software products with a complex logic behind it.",
+    "des2": "My technology stack includes React, TypeScript and Golang."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Here are some of my most favourite projects that I enjoyed coding and designing from scratch, both with a team and alone.",
+    "laddy": {
+      "subtitle": "Get better by solving problems",
+      "description": "Web app selects and lets you solve algorithmic problems of your level by looking at your Codeforces rating."
+    },
+    "nuopen": {
+      "subtitle": "Freshest ICPC competition",
+      "description": "Landing page for the largest open programming competition organized by Nazarbayev University students."
+    },
+    "railwayz": {
+      "subtitle": "Samruk Hackathon Winner",
+      "description": "Accurate prediction of the number of railway carriages required for different routes. \"Best Architecture\" title among all teams. Project made by Janbyr Inc."
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "I am passionate about using cutting-edge technologies. These are the tools I am most familiar with and build things every day."
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "Here are some great companies I had the honour to join for working on various interesting projects."
+  },
+  "contact": {
+    "title": "Wanna reach out?",
+    "description": "Feel free to drop me a message if you have some interesting offer or you want to hang out."
+  },
+  "currently": "Currently",
+  "citation": {
+    "content": "Ninjas are not born, they are made",
+    "author": "カンフー・パンダ"
+  },
+  "covid19": "Postponed due to Covid-19",
+  "and": "and"
+}
