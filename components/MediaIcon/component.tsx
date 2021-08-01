@@ -20,8 +20,8 @@ export const MediaIcon: FC<Props> = ({ icon, href, className }: Props) => {
             scale: 1,
           },
           hover: {
-            rotate: 10,
-            scale: 1.2,
+            rotate: 0,
+            scale: 1.4,
           },
         }}
         className="text-black-900 dark:text-white-900"

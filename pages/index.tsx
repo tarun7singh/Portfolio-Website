@@ -1,5 +1,4 @@
 import {
-  CitationOverlay,
   Contact,
   Experience,
   Footer,
@@ -16,25 +15,20 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React, { useEffect, useState } from "react";
 
 const IndexPage = () => {
-  const [citation, setCitation] = useState(true);
   const [main, setMain] = useState(false);
   const { t } = useTranslation("common");
 
   useEffect(() => {
-    const ids = [
-      setTimeout(() => setCitation(false), 4800),
-      setTimeout(() => setMain(true), 5700),
-    ];
+    const ids = [setTimeout(() => setMain(true), 500)];
 
     return () => ids.forEach((id) => clearTimeout(id));
-  }, [setCitation]);
+  }, []);
 
   return (
     <>
       <Head>
         <title>{t("headTitle")}</title>
       </Head>
-      <CitationOverlay citation={citation} />
       <motion.div
         variants={{
           initial: {
@@ -55,8 +49,8 @@ const IndexPage = () => {
         <Header />
         <Hero />
         <Skills />
-        <Projects />
         <Experience />
+        <Projects />
         <Contact />
         <Footer />
       </motion.div>

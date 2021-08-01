@@ -13,42 +13,23 @@ export const Experience: FC = () => {
   const mdScreen = useMdScreen();
   const { t } = useTranslation("common");
 
-  const experience = useMemo(
-    () => [
-      {
-        title: "React Native Participant",
-        place: "N17R Incubator, Almaty",
-        date: "Jun 2018 - Aug 2018",
-      },
-      {
-        title: "SWE Intern",
-        place: "Yandex, Moscow",
-        date: "Jun 2019 - Aug 2019",
-      },
-      {
-        title: "STEP Intern",
-        place: "Google, Zurich",
-        date: t("covid19"),
-        cancelled: true,
-      },
-      {
-        title: "Ethereum Foundation",
-        place: "Blockchain Intern, Remote",
-        date: "Jun 2020 - Aug 2020",
-      },
-      {
-        title: "Frontend Engineer",
-        place: "alabs.team, Almaty",
-        date: `Jan 2021 - May 2021`,
-      },
-      {
-        title: "SWE Intern",
-        place: "Citadel, Hong Kong",
-        date: "May 2021 - Aug 2021",
-      },
-    ],
-    [t]
-  );
+  const experience = [
+    {
+      title: "July 2021 - Present",
+      place: "Kisan Network",
+      date: "Aug 2020 - Aug 2021",
+    },
+    {
+      title: "Freelancer",
+      place: "Upwork, Remote",
+      date: "Jul 2021 - Present",
+    },
+    {
+      title: "5th Engineer",
+      place: "Dockendale Ship Management, Mumbai",
+      date: "Dec 2018 - Dec 2019",
+    },
+  ];
 
   useEffect(() => {
     if (inView) {

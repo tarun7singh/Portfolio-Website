@@ -21,40 +21,43 @@ export const TsIcon: FC<Props> = ({ className }: Props) => {
   );
 };
 
-export const EthereumIcon: FC<Props> = ({ className }: Props) => {
+export const ActionsIcon: FC<Props> = ({ className }: Props) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
+    <img
+      src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg"
+      alt="Github Actions"
       className={className}
-      fill="none"
-      viewBox="0 0 20 32"
-    >
-      <g clipPath="url(#clip0)">
-        <path
-          fill="#343434"
-          d="M9.785 0l-.213.729v21.154l.213.215 9.786-5.805L9.785 0z"
-        ></path>
-        <path fill="#8C8C8C" d="M9.785 0L0 16.293l9.785 5.805V0z"></path>
-        <path
-          fill="#3C3C3B"
-          d="M9.785 23.957l-.12.147v7.536l.12.353 9.791-13.838-9.79 5.802z"
-        ></path>
-        <path
-          fill="#8C8C8C"
-          d="M9.785 31.993v-8.036L0 18.155l9.785 13.838z"
-        ></path>
-        <path
-          fill="#141414"
-          d="M9.785 22.098l9.785-5.805-9.785-4.463v10.268z"
-        ></path>
-        <path fill="#393939" d="M0 16.293l9.785 5.805V11.83L0 16.293z"></path>
-      </g>
-      <defs>
-        <clipPath id="clip0">
-          <path fill="#fff" d="M0 0H19.576V32H0z"></path>
-        </clipPath>
-      </defs>
-    </svg>
+    ></img>
+  );
+};
+
+export const GitIcon: FC<Props> = ({ className }: Props) => {
+  return (
+    <img
+      src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+      alt="Git"
+      className={className}
+    ></img>
+  );
+};
+
+export const MongoDBIcon: FC<Props> = ({ className }: Props) => {
+  return (
+    <img
+      src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/mongodb.svg"
+      alt="Mongo DB"
+      className={className}
+    ></img>
+  );
+};
+
+export const GCloudIcon: FC<Props> = ({ className }: Props) => {
+  return (
+    <img
+      src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
+      alt="Google Cloud"
+      className={className}
+    ></img>
   );
 };
 

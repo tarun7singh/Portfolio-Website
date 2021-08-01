@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Container, Logo } from "components";
+import { Container } from "components";
 import { useOnClickOutside } from "lib";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -17,15 +17,9 @@ enum Themes {
 
 enum Languages {
   en = "en",
-  ru = "ru",
 }
 
 const languages = [
-  {
-    id: Languages.ru,
-    name: "RU",
-    flag: "🇷🇺",
-  },
   {
     id: Languages.en,
     name: "EN",
@@ -92,7 +86,12 @@ export const Header: FC = () => {
       <Container className="flex items-center justify-between w-auto py-5 md:py-9 text-black-900 dark:text-white-900">
         <Link href="/">
           <a href="/">
-            <Logo className="w-24 fill-current md:w-28 dark:text-white-900 text-black-900" />
+            <h1
+              style={{ fontFamily: "tangerine" }}
+              className="text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900"
+            >
+              Tarun Singh
+            </h1>
           </a>
         </Link>
         <div className="flex items-center">
