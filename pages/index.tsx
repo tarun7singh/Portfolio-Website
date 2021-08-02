@@ -10,7 +10,6 @@ import {
 import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import * as GoogleAnalytics from "next-google-analytics";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React, { useEffect, useState } from "react";
@@ -29,7 +28,6 @@ const IndexPage = () => {
     <>
       <Head>
         <title>{t("headTitle")}</title>
-        <GoogleAnalytics.Head />
       </Head>
       <motion.div
         variants={{

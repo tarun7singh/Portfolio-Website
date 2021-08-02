@@ -3,15 +3,35 @@ import "styles/index.scss";
 import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import * as GoogleAnalytics from "next-google-analytics";
+import { useRouter } from "next/router";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
+import { useEffect } from "react";
 
 import SEO from "../next-seo.config";
-
+let window: {
+  gtag: (
+    arg0: string,
+    arg1: string | undefined,
+    arg2: { page_path: string }
+  ) => void;
+};
 function MyApp({ Component, pageProps }: AppProps) {
-  GoogleAnalytics.useAppInit();
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      window.gtag("config", process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
+        page_path: url,
+      });
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <DefaultSeo {...SEO} />
@@ -46,4 +66,3 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default appWithTranslation(MyApp);
-export { reportWebVitals } from "next-google-analytics";
