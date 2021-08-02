@@ -11,7 +11,6 @@ jobs:
     - uses: actions/setup-node@v2
       with:
           node-version: "14.15.3"
-    # Caching logic
     - uses: actions/cache@v2
       with:
         path: ~/.npm
@@ -22,6 +21,8 @@ jobs:
       with:
         path: ${{ github.workspace }}/.next/cache
         key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nextjs-
     - name: Install Dependencies
       run: npm i
     - name: Build project
