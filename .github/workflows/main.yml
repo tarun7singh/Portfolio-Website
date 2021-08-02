@@ -1,13 +1,32 @@
 name: Deploy
 on:
   push:
-    branches: [ master ]
+    branches: [ major-redesign ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+          node-version: "14.15.3"
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - uses: actions/cache@v2
+      with:
+        path: ${{ github.workspace }}/.next/cache
+        key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nextjs-
+    - name: Install Dependencies
+      run: npm ci
+    - name: Build project
+      run: npm run build
     - name: Copy files via scp
       uses: appleboy/scp-action@master
       env:
@@ -16,5 +35,18 @@ jobs:
         PORT: ${{ secrets.ORACLE_VM_PORT }}
         KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
       with:
-        source: "*"
+        source: "*,!node_modules"
         target: "/home/ubuntu/portfolio"
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        HOST: ${{ secrets.ORACLE_HOST }}
+        USERNAME: ${{ secrets.ORACLE_USERNAME }}
+        PORT: ${{ secrets.ORACLE_VM_PORT }}
+        KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
+        script_stop: true
+        script: |
+          cd /home/ubuntu/portfolio
+          npm ci
+          npm run build
+    #       pm2 reload portfolio --update-env
