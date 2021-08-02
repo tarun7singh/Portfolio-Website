@@ -37,16 +37,16 @@ jobs:
       with:
         source: "*,!node_modules"
         target: "/home/ubuntu/portfolio"
-    # - name: Executing remote command
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     HOST: ${{ secrets.ORACLE_HOST }}
-    #     USERNAME: ${{ secrets.ORACLE_USERNAME }}
-    #     PORT: ${{ secrets.ORACLE_VM_PORT }}
-    #     KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
-    #     script_stop: true
-    #     script: |
-    #       cd /home/ubuntu/portfolio
-    #       npm ci
-    #       npm run build
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        HOST: ${{ secrets.ORACLE_HOST }}
+        USERNAME: ${{ secrets.ORACLE_USERNAME }}
+        PORT: ${{ secrets.ORACLE_VM_PORT }}
+        KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
+        script_stop: true
+        script: |
+          cd /home/ubuntu/portfolio
+          npm ci
+          npm run build
     #       pm2 reload portfolio --update-env
