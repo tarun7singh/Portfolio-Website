@@ -4,17 +4,31 @@ on:
     branches: [ master ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Copy files via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.ORACLE_HOST }}
-        USERNAME: ${{ secrets.ORACLE_USERNAME }}
-        PORT: ${{ secrets.ORACLE_VM_PORT }}
-        KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
       with:
-        source: "*"
-        target: "/home/ubuntu/portfolio"
+          node-version: "14"
+    # Caching logic
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Dependencies
+      run: npm i
+    - name: Build project
+      run: npm run build
+    # - name: Copy files via scp
+    #   uses: appleboy/scp-action@master
+    #   env:
+    #     HOST: ${{ secrets.ORACLE_HOST }}
+    #     USERNAME: ${{ secrets.ORACLE_USERNAME }}
+    #     PORT: ${{ secrets.ORACLE_VM_PORT }}
+    #     KEY: ${{ secrets.ORACLE_VM_SSH_KEY }}
+    #   with:
+    #     source: "*"
+    #     target: "/home/ubuntu/portfolio"
