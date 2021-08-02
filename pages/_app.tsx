@@ -3,6 +3,7 @@ import "styles/index.scss";
 import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
+import * as GoogleAnalytics from "next-google-analytics";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
@@ -10,6 +11,7 @@ import { ThemeProvider } from "next-themes";
 import SEO from "../next-seo.config";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  GoogleAnalytics.useAppInit();
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <DefaultSeo {...SEO} />
@@ -44,3 +46,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default appWithTranslation(MyApp);
+export { reportWebVitals } from "next-google-analytics";

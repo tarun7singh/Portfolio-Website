@@ -8,6 +8,7 @@ export const HeroLink: FC<Props> = ({ title, href }: Props) => {
     <motion.a
       href={href}
       target="_blank"
+      rel="noreferrer"
       className="relative text-blue-700"
       whileHover="visible"
       initial="hidden"

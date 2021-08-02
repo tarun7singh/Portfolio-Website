@@ -9,6 +9,7 @@ export const MediaIcon: FC<Props> = ({ icon, href, className }: Props) => {
     <motion.a
       href={href}
       target="_blank"
+      rel="noreferrer"
       whileHover="hover"
       initial="initial"
       className={clsx("relative", className)}

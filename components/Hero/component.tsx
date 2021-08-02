@@ -14,6 +14,8 @@ export const Hero: FC = () => {
     <Container className="pt-24 md:pt-32">
       <motion.img
         src="/images/me.jpg"
+        width="160px"
+        height="160px"
         alt="me"
         className="w-40 h-40 border border-gray-700 rounded-full mt-28 md:w-34 md:h-34"
         variants={{
