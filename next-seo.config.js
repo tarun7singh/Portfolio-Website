@@ -1,5 +1,5 @@
 export default {
-  title: "Tarun Singh | Dev Portfolio | Full Stack Developer | Freelancer",
+  title: "Tarun Singh | Full Stack Developer | Typescript, NodeJS, ReactJS",
   description: "Tarun Singh | Full Stack developer at Toronto, ON, Canada and Freelancer | Skills : Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang",
   canonical: "https://www.tarunsingh.dev",
   openGraph: {
