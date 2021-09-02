@@ -1,7 +1,6 @@
 export default {
   title: "Tarun Singh | Dev Portfolio | Full Stack Developer | Freelancer",
   description: "Tarun Singh | Full Stack developer at Toronto, ON, Canada and Freelancer | Skills : Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang",
-  keywords: "Tarun Singh, Tarun, Singh, Web developer, Full Stack web developer, Potfolio, Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang, freelancer, toronto, canada, upwork",
   canonical: "https://www.tarunsingh.dev",
   openGraph: {
     type: "website",
