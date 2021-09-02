@@ -28,6 +28,10 @@ const IndexPage = () => {
     <>
       <Head>
         <title>{t("headTitle")}</title>
+        <meta
+          name="keywords"
+          content="Tarun, Singh, Web developer, Full Stack web developer, Portfolio, Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang, freelancer, toronto"
+        />
       </Head>
       <motion.div
         variants={{
