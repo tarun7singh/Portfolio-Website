@@ -6,23 +6,11 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dd6de428dfb44f97be6553ba8bba9f86"}'></script>
           <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
+            defer
+            data-domain="tarunsingh.dev"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
         </Head>
         <body>
           <Main />
