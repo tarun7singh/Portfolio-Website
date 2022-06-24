@@ -18,6 +18,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
     "plugin:tailwind/recommended",
+    "plugin:@next/next/recommended",
   ],
   rules: {
     "simple-import-sort/imports": "error",
