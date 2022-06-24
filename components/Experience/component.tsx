@@ -16,13 +16,23 @@ export const Experience: FC = () => {
   const experience = [
     {
       title: "Full Stack Web Developer",
-      place: "Kisan Network",
-      date: "Aug 2020 - Aug 2021",
+      place: "Basebuild",
+      date: "May 2022 - Present",
+    },
+    {
+      title: "Full Stack Web Developer",
+      place: "Neuravue",
+      date: "March 2022 - Present",
     },
     {
       title: "Freelancer",
       place: "Upwork, Remote",
       date: "Jul 2021 - Present",
+    },
+    {
+      title: "Full Stack Web Developer",
+      place: "Kisan Network",
+      date: "Aug 2020 - Aug 2021",
     },
     {
       title: "5th Engineer",
