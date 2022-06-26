@@ -3,6 +3,8 @@
   "hero": {
     "title": "Hi, I'm Tarun!",
     "p0": "Full-stack web developer",
+    "c1": "Basebuild",
+    "c2": "Neuravue",
     "location": "@ Toronto, ON",
     "p1": "Previously Full Stack developer",
     "p2": "& Junior Engineer",
