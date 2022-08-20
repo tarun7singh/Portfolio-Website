@@ -1,6 +1,6 @@
 import { Container, MediaIcon } from "components";
-import { motion } from "framer-motion";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 import React, { FC } from "react";
 import { FaFilePdf, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -12,29 +12,12 @@ export const Hero: FC = () => {
 
   return (
     <Container className="pt-24 md:pt-32">
-      <motion.img
+      <Image
         src="/images/me.jpg"
         width="160px"
         height="160px"
         alt="me"
         className="w-40 h-40 border border-gray-700 rounded-full mt-28 md:w-34 md:h-34"
-        variants={{
-          hidden: {
-            scale: 0,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-          },
-        }}
-        transition={{
-          damping: 5,
-          mass: 1,
-          delay: 0.2,
-        }}
-        initial="hidden"
-        animate="visible"
       />
       <div className="flex">
         <h1 className="flex-grow mt-6 mb-6 text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900">
