@@ -1,6 +1,6 @@
 import { Container, MediaIcon } from "components";
-import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 import React, { FC } from "react";
 import { FaFilePdf, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -11,7 +11,7 @@ export const Hero: FC = () => {
   const { t } = useTranslation("common");
 
   return (
-    <Container className="pt-24 md:pt-32">
+    <Container className="pt-24 md:pt-36">
       <Image
         src="/images/me.jpg"
         width="160px"

@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { MediaIcon } from "components";
 import { motion } from "framer-motion";
 import { useHover } from "lib";
+import Image from "next/image";
 import React, { FC } from "react";
 import { FaGithub } from "react-icons/fa";
 
@@ -92,7 +93,7 @@ export const ProjectCard: FC<Props> = ({
         animate={isHovered ? "hovered" : "initial"}
         initial="initial"
       >
-        <img
+        <Image
           className="object-cover w-full h-full rounded-lg opacity-30 md:h-auto dark:opacity-40 md:opacity-100 md:dark:opacity-80"
           src={imageLink}
           alt={title}

@@ -79,20 +79,18 @@ export const Header: FC = () => {
   return (
     <div
       className={clsx(
-        "fixed z-20 w-full opacity-90 bg-lightTheme dark:bg-darkTheme transition-top duration-300",
+        "fixed z-10 w-full opacity-90 bg-lightTheme dark:bg-darkTheme transition-top duration-300",
         visible ? "top-0" : "-top-28"
       )}
     >
-      <Container className="flex items-center justify-between w-auto py-5 md:py-9 text-black-900 dark:text-white-900">
-        <Link href="/">
-          <a href="/">
-            <h1
-              style={{ fontFamily: "tangerine" }}
-              className="text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900"
-            >
-              Tarun Singh
-            </h1>
-          </a>
+      <Container className="flex items-center justify-between w-auto py-2 md:py-4 text-black-900 dark:text-white-900">
+        <Link href="/" passHref>
+          <h1
+            style={{ fontFamily: "tangerine" }}
+            className="text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900"
+          >
+            Tarun Singh
+          </h1>
         </Link>
         <div className="flex items-center">
           <button
