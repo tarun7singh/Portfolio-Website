@@ -10,7 +10,7 @@ export const Hero: FC = () => {
   return (
     <Container className="pt-24 md:pt-36">
       <Image
-        src="/images/me.jpg"
+        src="/images/me.webp"
         width="160px"
         height="160px"
         alt="me"
