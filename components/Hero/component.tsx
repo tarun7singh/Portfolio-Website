@@ -1,6 +1,5 @@
 import { Container, MediaIcon } from "components";
 import Image from "next/image";
-import { useTranslation } from "next-i18next";
 import React, { FC } from "react";
 import { FaFilePdf, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -8,8 +7,6 @@ import { HandWave } from "./libs/HandWave";
 import { HeroLink } from "./libs/HeroLink";
 
 export const Hero: FC = () => {
-  const { t } = useTranslation("common");
-
   return (
     <Container className="pt-24 md:pt-36">
       <Image
@@ -21,19 +18,19 @@ export const Hero: FC = () => {
       />
       <div className="flex">
         <h1 className="flex-grow mt-6 mb-6 text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900">
-          {t("hero.title")}
+          {"Hi, I'm Tarun!"}
           <HandWave className="text-4xl md:text-5xl wave" />
         </h1>
         <h1 className="text-2xl font-bold md:mt-8 md:mb-8 md:text-2xl text-black-900 dark:text-white-900 align-right">
-          {t("hero.location")}
+          {"@ Toronto, ON"}
         </h1>
       </div>
       <p className="text-xl font-bold tracking-normal md:text-3xl text-black-700 dark:text-white-700">
-        {t("hero.p0")}{" "}
-        <HeroLink title={t("hero.c1")} href="https://basebuild.com" /> {" & "}
-        <HeroLink title={t("hero.c2")} href="https://neuravue.com" />
+        {"Full-stack web developer"}{" "}
+        <HeroLink title={"Basebuild"} href="https://basebuild.com" /> {" & "}
+        <HeroLink title={"Neuravue"} href="https://neuravue.com" />
         <br />
-        {t("hero.p1")}{" "}
+        {"Previously Full Stack developer"}{" "}
         <HeroLink title="Kisan Network" href="https://kisannetwork.com" />
       </p>
       <div className="flex mt-8">
@@ -59,10 +56,14 @@ export const Hero: FC = () => {
       </div>
       <div className="mt-10">
         <p className="mb-2 text-base md:text-xl dark:text-white-700 text-black-700">
-          {t("hero.des0")}
+          {
+            "I enjoy creating high-quality software products and projects with a complex logic behind it."
+          }
         </p>
         <p className="mb-2 text-base md:text-xl dark:text-white-700 text-black-700">
-          {t("hero.des1")}
+          {
+            "My technology stack includes React, TypeScript, NodeJS, Golang and python."
+          }
         </p>
       </div>
     </Container>

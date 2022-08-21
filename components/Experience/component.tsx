@@ -1,7 +1,6 @@
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
 import { useMdScreen } from "lib";
-import { useTranslation } from "next-i18next";
 import React, { FC, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -11,7 +10,6 @@ export const Experience: FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const mdScreen = useMdScreen();
-  const { t } = useTranslation("common");
 
   const experience = [
     {
@@ -53,8 +51,10 @@ export const Experience: FC = () => {
   return (
     <Section
       className="mt-20 mb-16 md:mt-28"
-      title={t("experience.title")}
-      description={t("experience.description")}
+      title={"Experience"}
+      description={
+        "Here are some great companies I had the honour to join for working with."
+      }
     >
       <Container className="mt-14">
         <div className="flex justify-between max-w-screen-sm" ref={ref}>
