@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import { Container } from "components";
-import { useOnClickOutside } from "lib";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
 import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import { HiMoon, HiSun } from "react-icons/hi";
@@ -15,18 +13,6 @@ enum Themes {
   dark = "dark",
 }
 
-enum Languages {
-  en = "en",
-}
-
-const languages = [
-  {
-    id: Languages.en,
-    name: "EN",
-    flag: "🇺🇸",
-  },
-];
-
 export const Header: FC = () => {
   const [playOnDark] = useSound("/sounds/dark-on.mp3");
   const [playOnLight] = useSound("/sounds/light-on.mp3");
@@ -34,13 +20,8 @@ export const Header: FC = () => {
   const ref = useRef<HTMLDivElement>(null);
 
   const [mounted, setMounted] = useState(false);
-  const [langPicker, setLangPicker] = useState(false);
 
   const { theme, setTheme } = useTheme();
-  const router = useRouter();
-  const [language, setLanguage] = useState<string>(
-    router.locale || Languages.en
-  );
 
   const toggleTheme = useCallback(() => {
     if (theme === Themes.light) {
@@ -51,28 +32,6 @@ export const Header: FC = () => {
 
     setTheme(theme === Themes.light ? Themes.dark : Themes.light);
   }, [setTheme, theme, playOnDark, playOnLight]);
-
-  const toggleLangPicker = useCallback(() => {
-    setLangPicker((prev) => !prev);
-  }, []);
-
-  const turnOffLangPicker = useCallback(() => {
-    setLangPicker(false);
-  }, []);
-
-  useOnClickOutside(ref, turnOffLangPicker);
-
-  const toggleLanguage = useCallback(
-    (newLanguage: Languages) => {
-      return () => {
-        turnOffLangPicker();
-        setLanguage(newLanguage);
-        if (newLanguage !== language)
-          router.push("/", "/", { locale: newLanguage });
-      };
-    },
-    [router, turnOffLangPicker, language]
-  );
 
   useEffect(() => setMounted(true), []);
 
@@ -106,45 +65,7 @@ export const Header: FC = () => {
             ) : null}
           </button>
           <div className="relative ml-2 md:ml-4" ref={ref}>
-            <button
-              className="py-2 pl-4 text-base font-medium uppercase rounded appearance-none pr-9 focus:outline-none focus:ring-2 focus:ring-blue-700 bg-none"
-              onClick={toggleLangPicker}
-            >
-              {language}
-            </button>
-            {langPicker && (
-              <div className="absolute w-full p-1 mt-4 bg-pink dark:bg-white-900 rounded-md text-black-900">
-                {languages.map((currentLanguage, i) => (
-                  <>
-                    <button
-                      className="block w-full px-2 py-1 text-left hover:bg-white-700 rounded-md transition-colors focus:outline-none"
-                      key={currentLanguage.id}
-                      onClick={toggleLanguage(currentLanguage.id)}
-                    >
-                      <p className={clsx("inline")}>{currentLanguage.name} </p>
-                      <span role="img" aria-label="flag">
-                        {currentLanguage.flag}
-                      </span>
-                    </button>
-                    {i !== languages.length - 1 && (
-                      <div className="my-1 bg-white-700 h-0.5" />
-                    )}
-                  </>
-                ))}
-              </div>
-            )}
-            <span className="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center pointer-events-none">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4"
-                viewBox="0 0 24 24"
-              >
-                <path d="M6 9l6 6 6-6"></path>
-              </svg>
-            </span>
+            <span className="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center pointer-events-none"></span>
           </div>
         </div>
       </Container>

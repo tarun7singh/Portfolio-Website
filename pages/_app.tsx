@@ -4,7 +4,6 @@ import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
@@ -65,4 +64,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default appWithTranslation(MyApp);
+export default MyApp;

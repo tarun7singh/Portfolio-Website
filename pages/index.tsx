@@ -8,15 +8,11 @@ import {
   Skills,
 } from "components";
 import { motion } from "framer-motion";
-import { GetStaticProps } from "next";
 import Head from "next/head";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import React, { useEffect, useState } from "react";
 
 const IndexPage = () => {
   const [main, setMain] = useState(false);
-  const { t } = useTranslation("common");
 
   useEffect(() => {
     const ids = [setTimeout(() => setMain(true), 500)];
@@ -27,7 +23,9 @@ const IndexPage = () => {
   return (
     <>
       <Head>
-        <title>{t("headTitle")}</title>
+        <title>
+          {"Tarun Singh | Full Stack Developer | Typescript, NodeJS, ReactJS"}
+        </title>
         <meta
           name="keywords"
           content="Tarun, Singh, Web developer, Full Stack web developer, Portfolio, Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang, freelancer, toronto"
@@ -60,14 +58,6 @@ const IndexPage = () => {
       </motion.div>
     </>
   );
-};
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale ?? "en", ["common"])),
-    },
-  };
 };
 
 export default IndexPage;

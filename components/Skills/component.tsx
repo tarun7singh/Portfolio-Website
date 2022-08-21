@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
-import { useTranslation } from "next-i18next";
 import React, { FC, useEffect } from "react";
 import { FaReact } from "react-icons/fa";
 import { SiMysql, SiNodeDotJs } from "react-icons/si";
@@ -82,7 +81,6 @@ const skills = [
 export const Skills: FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
-  const { t } = useTranslation("common");
 
   useEffect(() => {
     if (inView) {
@@ -96,8 +94,10 @@ export const Skills: FC = () => {
   return (
     <Section
       className="mt-20 mb-16 md:mt-28"
-      title={t("skills.title")}
-      description={t("skills.description")}
+      title={"Skills"}
+      description={
+        "I am passionate about using cutting-edge technologies. These are the tools I am most familiar with and build things every day."
+      }
     >
       <Container>
         <div
