@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React, { FC } from "react";
 
 type Props = {
@@ -24,41 +24,186 @@ export const TsIcon: FC<Props> = ({ className }: Props) => {
 
 export const ActionsIcon: FC<Props> = ({ className }: Props) => {
   return (
-    <img
-      src="https://github.githubassets.com/images/modules/site/features/actions-icon-actions.svg"
-      alt="Github Actions"
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 48 48"
       className={className}
-    ></img>
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10 1C14.9707 1 19 5.02932 19 10C19 14.9707 14.9707 19 10 19C5.02932 19 1 14.9707 1 10C1 5.02932 5.02932 1 10 1Z"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M23 19C26.3137 19 29 21.6863 29 25C29 28.3137 26.3137 31 23 31C19.6863 31 17 28.3137 17 25C17 21.6863 19.6863 19 23 19Z"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M23 35C26.3137 35 29 37.6863 29 41C29 44.3137 26.3137 47 23 47C19.6863 47 17 44.3137 17 41C17 37.6863 19.6863 35 23 35Z"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M41 35C44.3137 35 47 37.6863 47 41C47 44.3137 44.3137 47 41 47C37.6863 47 35 44.3137 35 41C35 37.6863 37.6863 35 41 35Z"
+        stroke="var(--color-marketing-icon-secondary, #79B8FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M25.0365 23.6069L21.9673 26.672L20.4766 25.1866"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M41 19C44.3137 19 47 21.6863 47 25C47 28.3137 44.3137 31 41 31C37.6863 31 35 28.3137 35 25C35 21.6863 37.6863 19 41 19Z"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M43.0365 23.6069L39.9673 26.672L38.4766 25.1866"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 6.81201C7 6.02498 7.86709 5.54641 8.533 5.9659L13.6462 9.18692C14.2715 9.58082 14.2682 10.4935 13.6402 10.8829L8.52697 14.0534C7.8608 14.4664 7 13.9873 7 13.2035V6.81201Z"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9 19V34C9 37.866 12.1772 41 16 41H17"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.949 26C17.5013 26 17.949 25.5523 17.949 25C17.949 24.4477 17.5013 24 16.949 24V26ZM8 19.0352C8 22.8817 11.1183 26 14.9648 26V24C12.2228 24 10 21.7772 10 19.0352H8ZM14.9648 26H16.949V24H14.9648V26Z"
+        fill="var(--color-marketing-icon-primary, #2088FF)"
+      />
+      <path
+        d="M29.0547 25H34.9993"
+        stroke="var(--color-marketing-icon-primary, #2088FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M21 40C21.5518 40 22 40.4482 22 41C22 41.5526 21.5518 42 21 42C20.4482 42 20 41.5526 20 41C20 40.4482 20.4482 40 21 40Z"
+        fill="var(--color-marketing-icon-secondary, #79B8FF)"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M25 40C25.5518 40 26 40.4482 26 41C26 41.5526 25.5518 42 25 42C24.4482 42 24 41.5526 24 41C24 40.4482 24.4482 40 25 40Z"
+        fill="var(--color-marketing-icon-secondary, #79B8FF)"
+      />
+      <path
+        d="M34.0048 41.0069L32.9922 41.0399"
+        stroke="var(--color-marketing-icon-secondary, #79B8FF)"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
   );
 };
 
 export const GitIcon: FC<Props> = ({ className }: Props) => {
   return (
-    <img
-      src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+    <Image
+      src="/images/git.png"
+      width={32}
+      height={32}
       alt="Git"
       className={className}
-    ></img>
+    ></Image>
   );
 };
 
 export const MongoDBIcon: FC<Props> = ({ className }: Props) => {
   return (
-    <img
-      src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/mongodb.svg"
-      alt="Mongo DB"
+    <Image
+      src="/images/mongodb.png"
+      alt="MongoDB"
       className={className}
-    ></img>
+      width={32}
+      height={32}
+      style={{ transform: "scale(2)" }}
+    ></Image>
   );
 };
 
 export const GCloudIcon: FC<Props> = ({ className }: Props) => {
   return (
-    <img
-      src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg"
-      alt="Google Cloud"
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
       className={className}
-    ></img>
+      viewBox="0 0 48 48"
+    >
+      <path
+        fill="#1976d2"
+        d="M38.193,18.359c-0.771-2.753-2.319-5.177-4.397-7.03l-4.598,4.598	c1.677,1.365,2.808,3.374,3.014,5.648v1.508c0.026,0,0.05-0.008,0.076-0.008c2.322,0,4.212,1.89,4.212,4.212S34.61,31.5,32.288,31.5	c-0.026,0-0.05-0.007-0.076-0.008V31.5h-6.666H24V38h8.212v-0.004c0.026,0,0.05,0.004,0.076,0.004C38.195,38,43,33.194,43,27.288	C43,23.563,41.086,20.279,38.193,18.359z"
+      ></path>
+      <path
+        fill="#ffe082"
+        d="M19.56,25.59l4.72-4.72c-0.004-0.005-0.008-0.009-0.011-0.013l-4.717,4.717	C19.554,25.579,19.557,25.584,19.56,25.59z"
+        opacity=".5"
+      ></path>
+      <path
+        fill="#90caf9"
+        d="M19.56,25.59l4.72-4.72c-0.004-0.005-0.008-0.009-0.011-0.013l-4.717,4.717	C19.554,25.579,19.557,25.584,19.56,25.59z"
+        opacity=".5"
+      ></path>
+      <path
+        fill="#ff3d00"
+        d="M24,7.576c-8.133,0-14.75,6.617-14.75,14.75c0,0.233,0.024,0.46,0.035,0.69h6.5	c-0.019-0.228-0.035-0.457-0.035-0.69c0-4.549,3.701-8.25,8.25-8.25c1.969,0,3.778,0.696,5.198,1.851l4.598-4.598	C31.188,9.003,27.761,7.576,24,7.576z"
+      ></path>
+      <path
+        fill="#90caf9"
+        d="M15.712,31.5L15.712,31.5c-0.001,0-0.001,0-0.002,0c-0.611,0-1.188-0.137-1.712-0.373	l-4.71,4.71C11.081,37.188,13.301,38,15.71,38c0.001,0,0.001,0,0.002,0v0H24v-6.5H15.712z"
+        opacity=".5"
+      ></path>
+      <path
+        fill="#4caf50"
+        d="M15.712,31.5L15.712,31.5c-0.001,0-0.001,0-0.002,0c-0.611,0-1.188-0.137-1.712-0.373l-4.71,4.71	C11.081,37.188,13.301,38,15.71,38c0.001,0,0.001,0,0.002,0v0H24v-6.5H15.712z"
+      ></path>
+      <path
+        fill="#ffc107"
+        d="M11.5,27.29c0-2.32,1.89-4.21,4.21-4.21c1.703,0,3.178,1.023,3.841,2.494l4.717-4.717	c-1.961-2.602-5.065-4.277-8.559-4.277C9.81,16.58,5,21.38,5,27.29c0,3.491,1.691,6.59,4.288,8.547l4.71-4.71	C12.53,30.469,11.5,28.999,11.5,27.29z"
+      ></path>
+    </svg>
   );
 };
 
