@@ -4,7 +4,6 @@ import React, { FC } from "react";
 type Props = {
   className?: string;
 };
-
 export const TsIcon: FC<Props> = ({ className }: Props) => {
   return (
     <svg
