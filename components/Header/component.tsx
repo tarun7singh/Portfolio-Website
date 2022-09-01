@@ -55,6 +55,7 @@ export const Header: FC = () => {
           <button
             className="items-center justify-center w-12 h-12 rounded-md dark:bg-gray-900 bg-pink focus:outline-none focus:ring-2 ring-blue-700 d-flex"
             onClick={toggleTheme}
+            aria-label="Toggle theme"
           >
             {mounted ? (
               theme === Themes.light ? (

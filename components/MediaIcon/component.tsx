@@ -4,7 +4,12 @@ import React, { FC } from "react";
 
 import { Props } from "./props";
 
-export const MediaIcon: FC<Props> = ({ icon, href, className }: Props) => {
+export const MediaIcon: FC<Props> = ({
+  icon,
+  href,
+  className,
+  ariaLabel,
+}: Props) => {
   return (
     <motion.a
       href={href}
@@ -13,6 +18,7 @@ export const MediaIcon: FC<Props> = ({ icon, href, className }: Props) => {
       whileHover="hover"
       initial="initial"
       className={clsx("relative", className)}
+      aria-label={ariaLabel}
     >
       <motion.div
         variants={{

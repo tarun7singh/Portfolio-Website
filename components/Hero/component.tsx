@@ -38,20 +38,24 @@ export const Hero: FC = () => {
           icon={<FaLinkedin className="w-6 h-6 md:w-7 md:h-7" />}
           href="https://www.linkedin.com/in/tarun7singh/"
           className="mr-4"
+          ariaLabel="LinkedIn Profile"
         />
         <MediaIcon
           icon={<FaGithub className="w-6 h-6 md:w-7 md:h-7" />}
           href="https://github.com/tarun7singh"
           className="mr-4"
+          ariaLabel="Github profile"
         />
         <MediaIcon
           icon={<FaTwitter className="w-6 h-6 md:w-7 md:h-7" />}
           href="https://twitter.com/tarun7singh"
           className="mr-4"
+          ariaLabel="Twitter profile"
         />
         <MediaIcon
           icon={<FaFilePdf className="w-6 h-6 md:w-7 md:h-7" />}
           href="https://tarunsingh.dev/resume/Resume.pdf"
+          ariaLabel="Resume"
         />
       </div>
       <div className="mt-10">
