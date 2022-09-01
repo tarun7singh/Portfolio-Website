@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { FC } from "react";
 import { FaGithub } from "react-icons/fa";
 
-import { OutIcon } from "../OutIcon";
+// import { OutIcon } from "../OutIcon";
 import { Props } from "./props";
 import styles from "./styles.module.css";
 
@@ -69,11 +69,12 @@ export const ProjectCard: FC<Props> = ({
             icon={<FaGithub className="w-6 h-6" />}
             href={githubLink}
             className="mr-4"
+            ariaLabel="Github Link"
           />
-          <MediaIcon
+          {/* <MediaIcon
             icon={<OutIcon className="w-6 h-6 stroke-current" />}
             href={externalLink}
-          />
+          /> */}
         </div>
       </div>
       <motion.div
