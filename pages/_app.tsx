@@ -4,6 +4,7 @@ import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
@@ -57,6 +58,19 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+        `}
+      </Script>
       <Layout>
         <Component {...pageProps} />
       </Layout>
