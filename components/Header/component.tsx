@@ -48,7 +48,7 @@ export const Header: FC = () => {
             style={{ fontFamily: "tangerine" }}
             className="text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900"
           >
-            Tarun Singh -
+            Tarun Singh
           </h1>
         </Link>
         <div className="flex items-center">
