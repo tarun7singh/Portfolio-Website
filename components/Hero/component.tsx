@@ -26,11 +26,12 @@ export const Hero: FC = () => {
         </h1>
       </div>
       <p className="text-xl font-bold tracking-normal md:text-3xl text-black-700 dark:text-white-700">
-        {"Full-stack web developer"}{" "}
-        <HeroLink title={"Basebuild"} href="https://basebuild.com" /> {" & "}
-        <HeroLink title={"Neuravue"} href="https://neuravue.com" />
+        {"Software Engineer"}{" "}
+        <HeroLink title={"SOTI"} href="https://soti.net" />
         <br />
         {"Previously Full Stack developer"}{" "}
+        <HeroLink title={"Basebuild"} href="https://basebuild.com" /> {" , "}
+        <HeroLink title={"Neuravue"} href="https://neuravue.com" /> {" & "}
         <HeroLink title="Kisan Network" href="https://kisannetwork.com" />
       </p>
       <div className="flex mt-8">
