@@ -9,7 +9,7 @@ test("has title", async ({ page }) => {
   );
 });
 
-test("test", async ({ page }) => {
+test("validate all links", async ({ page }) => {
   const validLinks = {
     linkedIn: "https://www.linkedin.com/in/tarun7singh/",
     github: "https://github.com/tarun7singh",
