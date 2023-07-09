@@ -35,3 +35,6 @@ yarn-error.log*
 
 # ide
 .idea/
+/test-results/
+/playwright-report/
+/playwright/.cache/
