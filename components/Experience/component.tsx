@@ -13,9 +13,14 @@ export const Experience: FC = () => {
 
   const experience = [
     {
-      title: "Software Developer",
+      title: "Full Stack Web Developer",
       place: "SOTI Inc",
       date: "Jan 2023 - Present",
+    },
+    {
+      title: "Full Stack Web Developer",
+      place: "Neuravue",
+      date: "Mar 2022 - Present",
     },
     {
       title: "Full Stack Web Developer",
@@ -33,11 +38,13 @@ export const Experience: FC = () => {
       date: "Aug 2020 - Aug 2021",
     },
     {
-      title: "Junior Engineer",
+      title: "Software Engineer",
       place: "Dockendale Ship Management, Mumbai",
       date: "Dec 2018 - Dec 2019",
     },
   ];
+
+  const mid = Math.ceil(experience.length / 2);
 
   useEffect(() => {
     if (inView) {
@@ -61,7 +68,7 @@ export const Experience: FC = () => {
           {mdScreen ? (
             <>
               <div>
-                {experience.slice(0, 3).map((item, i) => (
+                {experience.slice(0, mid).map((item, i) => (
                   <Item
                     {...item}
                     key={i}
@@ -73,12 +80,12 @@ export const Experience: FC = () => {
                 ))}
               </div>
               <div>
-                {experience.slice(3).map((item, i) => (
+                {experience.slice(mid).map((item, i) => (
                   <Item
                     {...item}
                     key={i}
                     first={i === 0}
-                    last={i === 1}
+                    last={i === experience.slice(mid).length - 1}
                     controls={controls}
                     custom={i}
                   />

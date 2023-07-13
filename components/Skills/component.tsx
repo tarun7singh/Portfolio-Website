@@ -4,7 +4,6 @@ import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
 import React, { FC, useEffect } from "react";
 import { FaReact } from "react-icons/fa";
-import { SiMysql, SiNodeDotJs } from "react-icons/si";
 import { useInView } from "react-intersection-observer";
 
 import {
@@ -12,6 +11,7 @@ import {
   GCloudIcon,
   GoIcon,
   MongoDBIcon,
+  MySQLIcon,
   TsIcon,
 } from "./libs/Icons";
 import { Skill } from "./libs/Skill";
@@ -26,7 +26,7 @@ const skills = [
   {
     name: "Node.js",
     href: "https://nodejs.org",
-    icon: <SiNodeDotJs color="#539E43" />,
+    icon: <TsIcon />,
     main: true,
   },
   {
@@ -38,7 +38,7 @@ const skills = [
   {
     name: "MySQL",
     href: "https://www.mysql.com",
-    icon: <SiMysql />,
+    icon: <MySQLIcon />,
     main: true,
   },
   {
