@@ -4,6 +4,7 @@ import {
   Footer,
   Header,
   Hero,
+  OpenSource,
   Projects,
   Skills,
 } from "components";
@@ -51,6 +52,7 @@ const IndexPage = () => {
         <Header />
         <Hero />
         <Skills />
+        <OpenSource />
         <Experience />
         <Projects />
         <Contact />
