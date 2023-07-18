@@ -8,7 +8,7 @@
     "lint": "eslint . --ext .ts,.tsx --fix"
   },
   "dependencies": {
-    "clsx": "^1.1.1",
+    "clsx": "^2.0.0",
     "framer-motion": "^4.1.2",
     "next": "^12.1.6",
     "next-seo": "^4.23.0",
