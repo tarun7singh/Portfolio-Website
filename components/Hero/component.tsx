@@ -27,12 +27,14 @@ export const Hero: FC = () => {
       </div>
       <p className="text-xl font-bold tracking-normal md:text-3xl text-black-700 dark:text-white-700">
         {"Software Engineer"}{" "}
-        <HeroLink title={"SOTI"} href="https://soti.net" />
+        <HeroLink title={"SOTI"} href="https://soti.net" /> {" & "}{" "}
+        <HeroLink title={"Neuravue"} href="https://neuravue.com" />
         <br />
         {"Previously Full Stack developer"}{" "}
         <HeroLink title={"Basebuild"} href="https://basebuild.com" /> {" , "}
-        <HeroLink title={"Neuravue"} href="https://neuravue.com" /> {" & "}
-        <HeroLink title="Kisan Network" href="https://kisannetwork.com" />
+        <HeroLink title="Kisan Network" href="https://kisannetwork.com" />{" "}
+        {" & "}
+        <HeroLink title={"Dockendale"} href="https://www.dockendale.com/" />
       </p>
       <div className="flex mt-8">
         <MediaIcon
@@ -67,7 +69,7 @@ export const Hero: FC = () => {
         </p>
         <p className="mb-2 text-base md:text-xl dark:text-white-700 text-black-700">
           {
-            "My technology stack includes React, TypeScript, NodeJS, Golang and python."
+            "My technology stack includes NextJS, Angular, React, TypeScript, NodeJS, Express, Golang, MongoDB, PostgreSQL and python."
           }
         </p>
       </div>
