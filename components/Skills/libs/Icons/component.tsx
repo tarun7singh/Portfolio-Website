@@ -162,6 +162,22 @@ export const GitIcon: FC<Props> = ({ className }: Props) => {
   );
 };
 
+export const MySQLIcon: FC<Props> = ({ className }: Props) => {
+  return (
+    <Image
+      src="/images/mysql.svg"
+      width={32}
+      height={32}
+      alt="MySQL"
+      style={{
+        filter:
+          "invert(40%) sepia(65%) saturate(379%) hue-rotate(163deg) brightness(97%) contrast(88%)",
+      }}
+      className={className}
+    ></Image>
+  );
+};
+
 export const MongoDBIcon: FC<Props> = ({ className }: Props) => {
   return (
     <Image

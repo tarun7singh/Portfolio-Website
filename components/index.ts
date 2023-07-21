@@ -6,6 +6,7 @@ export * from "./Header";
 export * from "./Hero";
 export * from "./Layout";
 export * from "./MediaIcon";
+export * from "./OpenSource";
 export * from "./Projects";
 export * from "./Section";
 export * from "./Skills";

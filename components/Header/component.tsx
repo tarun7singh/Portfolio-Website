@@ -3,7 +3,7 @@ import { Container } from "components";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import React, { FC, useCallback, useEffect, useRef, useState } from "react";
-import { HiMoon, HiSun } from "react-icons/hi";
+import { FaMoon, FaSun } from "react-icons/fa";
 import useSound from "use-sound";
 
 import { useHeaderVisible } from "./libs/useHeaderVisible";
@@ -59,9 +59,9 @@ export const Header: FC = () => {
           >
             {mounted ? (
               theme === Themes.light ? (
-                <HiMoon className="inline w-6 h-6 ml-1" />
+                <FaMoon className="inline w-6 h-6 ml-1" />
               ) : (
-                <HiSun className="inline w-6 h-6" />
+                <FaSun className="inline w-6 h-6" />
               )
             ) : null}
           </button>
