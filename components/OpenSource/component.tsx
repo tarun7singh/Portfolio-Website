@@ -14,7 +14,7 @@ export const OpenSource: FC = () => {
   // fetch contributions from link and store json in contributions
   useEffect(() => {
     fetch(
-      "https://pub-8a6db429542c44318cca163b0371a391.r2.dev/portfolio-assets/tarun-pull-requests.json"
+      "https://data.tarunsingh.dev/portfolio-assets/tarun-pull-requests.json"
     )
       .then((response) => response.json())
       .then((data) => setContributions(data));
