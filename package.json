@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .ts,.tsx --fix"
   },
   "dependencies": {
+    "@sentry/nextjs": "^7.61.0",
     "clsx": "^2.0.0",
     "framer-motion": "^4.1.2",
     "next": "^12.1.6",
