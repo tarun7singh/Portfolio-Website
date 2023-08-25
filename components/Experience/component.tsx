@@ -15,7 +15,7 @@ export const Experience: FC = () => {
     {
       title: "Full Stack Web Developer",
       place: "SOTI Inc",
-      date: "Jan 2023 - Present",
+      date: "Jan 2023 - Aug 2023",
     },
     {
       title: "Full Stack Web Developer",
