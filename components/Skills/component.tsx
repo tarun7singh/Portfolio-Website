@@ -66,18 +66,6 @@ const skills = [
     icon: <GoIcon />,
     main: true,
   },
-  // {
-  //   name: "Git",
-  //   href: "https://git-scm.com",
-  //   icon: <GitIcon />,
-  //   main: false,
-  // },
-  // {
-  //   name: "Linux",
-  //   href: "https://www.linuxfoundation.org",
-  //   icon: <FaLinux />,
-  //   main: false,
-  // },
 ];
 export const Skills: FC = () => {
   const controls = useAnimation();
