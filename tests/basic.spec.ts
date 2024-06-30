@@ -14,7 +14,7 @@ test("validate all links", async ({ page }) => {
     linkedIn: "https://www.linkedin.com/in/tarun7singh/",
     github: "https://github.com/tarun7singh",
     twitter: "https://twitter.com/tarun7singh",
-    resume: "https://tarunsingh.dev/resume/Resume.pdf",
+    resume: "https://tarunsingh.dev/Resume.pdf",
     email: "mailto:hello@tarunsingh.dev",
   };
   await page.goto("https://tarunsingh.dev/");
@@ -34,7 +34,7 @@ test("validate all links", async ({ page }) => {
       .getAttribute("href")
   ).toEqual(validLinks.twitter);
   expect(
-    await page.getByRole("link", { name: "Resume" }).getAttribute("href")
+    await page.getByRole("link", { name: "Resume-PDF" }).getAttribute("href")
   ).toEqual(validLinks.resume);
   expect(
     await page
