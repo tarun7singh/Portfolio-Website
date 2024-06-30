@@ -57,7 +57,7 @@ export const Hero: FC = () => {
         <MediaIcon
           icon={<FaFilePdf className="w-6 h-6 md:w-7 md:h-7" />}
           href="https://tarunsingh.dev/resume/Resume.pdf"
-          ariaLabel="Resume"
+          ariaLabel="Resume-PDF"
         />
       </div>
       <div className="mt-10">
