@@ -3,34 +3,29 @@ import "styles/index.scss";
 import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
-import { useEffect } from "react";
+import posthog from "posthog-js";
+import { PostHogProvider } from "posthog-js/react";
 
 import SEO from "../next-seo.config";
-let window: {
-  gtag: (
-    arg0: string,
-    arg1: string | undefined,
-    arg2: { page_path: string }
-  ) => void;
-};
-function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      window?.gtag("config", process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
-        page_path: url,
-      });
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+if (typeof window !== "undefined") {
+  // checks that we are client-side
+  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY || "", {
+    api_host: "/ingest",
+    ui_host: "https://us.posthog.com",
+    person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
+    // loaded: (posthog) => {
+    //   if (process.env.NODE_ENV === "development") posthog.debug(); // debug mode in development
+    // },
+  });
+}
+
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
@@ -58,24 +53,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
-        `}
-      </Script>
       <Layout>
-        <Component {...pageProps} />
+        <PostHogProvider client={posthog}>
+          <Component {...pageProps} />
+        </PostHogProvider>
       </Layout>
     </ThemeProvider>
   );
 }
-
-export default MyApp;
