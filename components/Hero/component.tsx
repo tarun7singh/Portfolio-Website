@@ -8,11 +8,11 @@ import { HeroLink } from "./libs/HeroLink";
 
 export const Hero: FC = () => {
   return (
-    <Container className="pt-24 md:pt-36">
+    <Container className="pt-16 md:pt-12">
       <Image
         src="/images/me.webp"
-        width="160px"
-        height="160px"
+        width="160"
+        height="160"
         alt="me"
         className="w-40 h-40 border border-gray-700 rounded-full mt-28 md:w-34 md:h-34"
       />
