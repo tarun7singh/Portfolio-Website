@@ -1,6 +1,7 @@
 {
   "name": "Tarun.Singh",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.13.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
