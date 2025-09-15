@@ -76,14 +76,14 @@ jobs:
         key: ${{ runner.os }}-build-${{ github.sha }}
     
     - name: Install Playwright Browsers
-      run: pnpm dlx playwright install --with-deps chromium
+      run: npx playwright install --with-deps chromium
     
     - name: Run functional validation tests
-      run: pnpm dlx playwright test package-upgrade-validation.spec.ts
+      run: npx playwright test package-upgrade-validation.spec.ts
       continue-on-error: false
     
     - name: Run UI snapshot tests
-      run: pnpm dlx playwright test ui-snapshots.spec.ts
+      run: npx playwright test ui-snapshots.spec.ts
       continue-on-error: true # Allow snapshots to fail in CI but still run
     
     - name: Upload Playwright report
@@ -154,10 +154,10 @@ jobs:
       run: pnpm install --frozen-lockfile
     
     - name: Install Playwright Browsers
-      run: pnpm dlx playwright install --with-deps ${{ matrix.browser }}
+      run: npx playwright install --with-deps ${{ matrix.browser }}
     
     - name: Run cross-browser tests
-      run: pnpm dlx playwright test package-upgrade-validation.spec.ts --project=${{ matrix.browser }}
+      run: npx playwright test package-upgrade-validation.spec.ts --project=${{ matrix.browser }}
     
     - name: Upload cross-browser test results
       uses: actions/upload-artifact@v4
