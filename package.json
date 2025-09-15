@@ -5,7 +5,14 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:snapshots": "playwright test tests/ui-snapshots.spec.ts",
+    "test:update-snapshots": "playwright test tests/ui-snapshots.spec.ts --update-snapshots",
+    "test:validation": "playwright test tests/package-upgrade-validation.spec.ts",
+    "validate-ui": "./scripts/validate-ui.sh"
   },
   "dependencies": {
     "clsx": "^2.1.1",
