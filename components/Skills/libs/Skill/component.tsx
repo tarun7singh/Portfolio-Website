@@ -32,7 +32,7 @@ export const Skill: FC<Props> = ({
       animate={controls}
       custom={custom}
     >
-      {cloneElement(icon, { className: "mx-auto w-9 h-9" })}
+      {cloneElement(icon, { className: "mx-auto w-9 h-9" } as any)}
       <p className="mt-2 text-base font-medium text-black-700 dark:text-white-700">
         {name}
       </p>
