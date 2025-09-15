@@ -1,4 +1,8 @@
 module.exports = {
+  experimental: {
+    // Allow cross-origin requests during development/testing
+    allowedDevOrigins: ["127.0.0.1:3000", "localhost:3000"],
+  },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",

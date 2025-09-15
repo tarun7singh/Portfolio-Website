@@ -117,10 +117,12 @@ test.describe("Package Upgrade Validation", () => {
   test("build-time generated content loads", async ({ page }) => {
     await page.goto("/");
     
-    // Verify that content that might be generated at build time is present
-    // This helps catch build-related issues from package upgrades
-    const contentElements = page.locator("section, main, article");
-    await expect(contentElements.first()).toBeVisible();
+    // Wait for the main animation to complete (500ms timeout + animation duration)
+    await page.waitForTimeout(1500);
+    
+    // Verify that the main motion div becomes visible after animation
+    const mainDiv = page.locator('div[style*="opacity: 1"]').first();
+    await expect(mainDiv).toBeVisible();
     
     // Check for any content that should be rendered
     const textContent = await page.textContent("body");
