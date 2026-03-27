@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#0f172a"/>
+  <rect x="150" y="80" width="300" height="240" rx="15" fill="#1e293b"/>
+  <circle cx="300" cy="200" r="60" fill="#3b82f6"/>
+  <text x="300" y="195" text-anchor="middle" fill="white" font-size="14" font-family="monospace">API</text>
+  <text x="300" y="215" text-anchor="middle" fill="white" font-size="14" font-family="monospace">v2.0</text>
+  <rect x="60" y="160" width="70" height="80" rx="5" fill="#475569"/>
+  <rect x="470" y="160" width="70" height="80" rx="5" fill="#475569"/>
+  <path d="M130 200 L240 200" stroke="#3b82f6" stroke-width="3"/>
+  <path d="M360 200 L470 200" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="80" cy="190" r="6" fill="#22c55e"/>
+  <circle cx="80" cy="210" r="6" fill="#f59e0b"/>
+  <circle cx="520" cy="190" r="6" fill="#22c55e"/>
+  <circle cx="520" cy="210" r="6" fill="#f59e0b"/>
+</svg>

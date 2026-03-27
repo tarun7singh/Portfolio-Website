@@ -13,7 +13,10 @@ export const Hero: FC = () => {
         src="/images/me.webp"
         width="160"
         height="160"
-        alt="me"
+        alt="Tarun Singh - Full Stack Developer"
+        priority
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
         className="w-40 h-40 border border-gray-700 rounded-full mt-28 md:w-34 md:h-34"
       />
       <div className="flex">

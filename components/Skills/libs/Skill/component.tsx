@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React, { cloneElement, FC } from "react";
 
@@ -31,6 +33,7 @@ export const Skill: FC<Props> = ({
       }}
       animate={controls}
       custom={custom}
+      aria-label={`Learn more about ${name}`}
     >
       {cloneElement(icon, { className: "mx-auto w-9 h-9" })}
       <p className="mt-2 text-base font-medium text-black-700 dark:text-white-700">

@@ -42,7 +42,7 @@ export const ProjectCard: FC<Props> = ({
         <p
           className={clsx(
             styles.description,
-            rightShift && "md:ml-auto md:text-right"
+            rightShift && "md:ml-auto md:text-right",
           )}
         >
           {description}
@@ -54,7 +54,7 @@ export const ProjectCard: FC<Props> = ({
             <p
               className={clsx(
                 "text-base dark:text-white-700 text-black-700",
-                i !== technologies.length - 1 && "mr-5 md:mr-8"
+                i !== technologies.length - 1 && "mr-5 md:mr-8",
               )}
               key={tech}
             >
@@ -80,7 +80,7 @@ export const ProjectCard: FC<Props> = ({
       <motion.div
         className={clsx(
           "absolute md:right-0 md:w-7/12 md:-top-6 top-0 h-full rounded-lg",
-          rightShift && "md:left-0"
+          rightShift && "md:left-0",
         )}
         style={{ zIndex: -1 }}
         variants={{
@@ -103,16 +103,16 @@ export const ProjectCard: FC<Props> = ({
           }}
         />
       </motion.div>
-      {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
       <a
         ref={hoverRef}
         target="_blank"
         className={clsx(
           "absolute top-0 h-full rounded-lg md:right-0 md:w-7/12 hidden md:block",
-          rightShift && "md:left-0"
+          rightShift && "md:left-0",
         )}
         href={externalLink}
         rel="noreferrer"
+        aria-label={`View ${title} project`}
       />
     </div>
   );

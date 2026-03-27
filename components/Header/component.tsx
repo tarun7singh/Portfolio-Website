@@ -1,8 +1,10 @@
+"use client";
+
 import clsx from "clsx";
-import { Container } from "components";
+import { Container, MobileMenu } from "components";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import React, { FC, useCallback, useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import useSound from "use-sound";
 
@@ -13,11 +15,18 @@ enum Themes {
   dark = "dark",
 }
 
+const navLinks = [
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Open Source", href: "/#open-source" },
+  { label: "Contact", href: "/#contact" },
+];
+
 export const Header: FC = () => {
   const [playOnDark] = useSound("/sounds/dark-on.mp3");
   const [playOnLight] = useSound("/sounds/light-on.mp3");
   const visible = useHeaderVisible();
-  const ref = useRef<HTMLDivElement>(null);
 
   const [mounted, setMounted] = useState(false);
 
@@ -39,7 +48,7 @@ export const Header: FC = () => {
     <div
       className={clsx(
         "fixed z-10 w-full opacity-90 bg-lightTheme dark:bg-darkTheme transition-top duration-300",
-        visible ? "top-0" : "-top-28"
+        visible ? "top-0" : "-top-28",
       )}
     >
       <Container className="flex items-center justify-between w-auto py-2 md:py-4 text-black-900 dark:text-white-900">
@@ -51,7 +60,24 @@ export const Header: FC = () => {
             Tarun Singh
           </h1>
         </Link>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={clsx(
+                  "px-2 lg:px-3 py-2 text-sm lg:text-base rounded-md",
+                  "text-black-900 dark:text-white-900",
+                  "hover:bg-pink dark:hover:bg-gray-900",
+                  "focus:outline-none focus:ring-2 focus:ring-blue-700",
+                  "transition-colors duration-200",
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
           <button
             className="items-center justify-center w-12 h-12 rounded-md dark:bg-gray-900 bg-pink focus:outline-none focus:ring-2 ring-blue-700 d-flex"
             onClick={toggleTheme}
@@ -65,9 +91,7 @@ export const Header: FC = () => {
               )
             ) : null}
           </button>
-          <div className="relative ml-2 md:ml-4" ref={ref}>
-            <span className="absolute top-0 right-0 flex items-center justify-center w-10 h-full text-center pointer-events-none"></span>
-          </div>
+          <MobileMenu />
         </div>
       </Container>
     </div>

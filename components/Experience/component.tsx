@@ -1,48 +1,21 @@
+"use client";
+
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
 import { useMdScreen } from "lib";
+import experienceData from "data/experience.json";
+import { Experience as ExperienceType } from "types";
 import React, { FC, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { Item } from "./libs/Item";
 
+const experience: ExperienceType[] = experienceData;
+
 export const Experience: FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const mdScreen = useMdScreen();
-
-  const experience = [
-    {
-      title: "Senior Full Stack Web Developer",
-      place: "RBC",
-      date: "Dec 2023 - Present",
-    },
-    {
-      title: "Full Stack Web Developer",
-      place: "Neuravue",
-      date: "Mar 2022 - Present",
-    },
-    {
-      title: "Full Stack Web Developer",
-      place: "SOTI Inc",
-      date: "Jan 2023 - Aug 2023",
-    },
-    {
-      title: "Full Stack Web Developer",
-      place: "Basebuild",
-      date: "May 2022 - May 2023",
-    },
-    {
-      title: "Full Stack Web Developer",
-      place: "Kisan Network",
-      date: "Aug 2020 - Aug 2021",
-    },
-    {
-      title: "Software Engineer",
-      place: "Dockendale Ship Management, Mumbai",
-      date: "Dec 2018 - Dec 2019",
-    },
-  ];
 
   const mid = Math.ceil(experience.length / 2);
 
