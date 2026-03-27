@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import React, { FC } from "react";
 
@@ -12,6 +14,7 @@ export const HeroLink: FC<Props> = ({ title, href }: Props) => {
       className="relative text-blue-700"
       whileHover="visible"
       initial="hidden"
+      aria-label={`Visit ${title} website`}
     >
       @{title}
       <motion.span

@@ -1,4 +1,3 @@
-import { AnimationControls } from "framer-motion";
 import { HTMLAttributes } from "react";
 
 export type Props = HTMLAttributes<HTMLDivElement> & {
@@ -9,5 +8,6 @@ export type Props = HTMLAttributes<HTMLDivElement> & {
   last?: boolean;
   first?: boolean;
   cancelled?: boolean;
-  controls?: AnimationControls;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  controls?: any;
 };

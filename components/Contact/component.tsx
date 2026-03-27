@@ -1,6 +1,8 @@
 import { Container, Section } from "components";
 import React, { FC } from "react";
 
+import { ContactForm } from "../ContactForm";
+
 export const Contact: FC = () => {
   return (
     <Section
@@ -11,14 +13,7 @@ export const Contact: FC = () => {
       }
     >
       <Container>
-        <div className="mt-4">
-          <a
-            href="mailto:hello@tarunsingh.dev"
-            className="text-base font-medium md:text-xl text-black-900 dark:text-white-900"
-          >
-            hello@tarunsingh.dev
-          </a>
-        </div>
+        <ContactForm />
       </Container>
     </Section>
   );

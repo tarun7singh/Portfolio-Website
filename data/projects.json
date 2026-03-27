@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Website",
+    "subtitle": "Personal Portfolio",
+    "description": "A modern portfolio website built with Next.js, featuring dark mode, smooth animations, and responsive design. Showcases my work experience, skills, and open source contributions.",
+    "externalLink": "https://tarunsingh.dev",
+    "githubLink": "https://github.com/tarun7singh/portfolio-website",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "imageLink": "/images/projects/portfolio.svg",
+    "rightShift": false
+  },
+  {
+    "id": 2,
+    "title": "Contribution Tracker",
+    "subtitle": "GitHub Analytics",
+    "description": "A web application that tracks and visualizes GitHub pull request contributions across repositories. Features real-time data fetching and interactive dashboards.",
+    "externalLink": "https://contributions.tarunsingh.dev",
+    "githubLink": "https://github.com/tarun7singh/contribution-tracker",
+    "technologies": ["React", "Node.js", "GraphQL", "PostgreSQL"],
+    "imageLink": "/images/projects/tracker.svg",
+    "rightShift": true
+  },
+  {
+    "id": 3,
+    "title": "TaskFlow",
+    "subtitle": "Project Management",
+    "description": "A Kanban-style project management tool with real-time collaboration, drag-and-drop boards, and team workspace features.",
+    "externalLink": "https://taskflow.tarunsingh.dev",
+    "githubLink": "https://github.com/tarun7singh/taskflow",
+    "technologies": ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    "imageLink": "/images/projects/taskflow.svg",
+    "rightShift": false
+  },
+  {
+    "id": 4,
+    "title": "Weather API",
+    "subtitle": "RESTful Service",
+    "description": "A high-performance weather API service with caching, rate limiting, and comprehensive documentation. Handles millions of requests daily.",
+    "externalLink": "https://api.tarunsingh.dev/weather",
+    "githubLink": "https://github.com/tarun7singh/weather-api",
+    "technologies": ["Go", "Redis", "Docker", "Kubernetes"],
+    "imageLink": "/images/projects/api.svg",
+    "rightShift": true
+  },
+  {
+    "id": 5,
+    "title": "ML Image Classifier",
+    "subtitle": "Computer Vision",
+    "description": "A deep learning model for image classification with an easy-to-use REST API. Supports custom model training and batch processing.",
+    "externalLink": "https://classifier.tarunsingh.dev",
+    "githubLink": "https://github.com/tarun7singh/ml-classifier",
+    "technologies": ["Python", "TensorFlow", "FastAPI", "AWS S3"],
+    "imageLink": "/images/projects/ml.svg",
+    "rightShift": false
+  }
+]

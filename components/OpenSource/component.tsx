@@ -1,4 +1,6 @@
-import { Container, Section } from "components";
+"use client";
+
+import { Container, LoadingSkeleton, Section } from "components";
 import { useAnimation } from "framer-motion";
 import React, { FC, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -10,14 +12,18 @@ export const OpenSource: FC = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const [contributions, setContributions] = useState<IContributions>({});
+  const [loading, setLoading] = useState(true);
 
-  // fetch contributions from link and store json in contributions
   useEffect(() => {
     fetch(
-      "https://data.tarunsingh.dev/portfolio-assets/tarun-pull-requests.json"
+      "https://data.tarunsingh.dev/portfolio-assets/tarun-pull-requests.json",
     )
       .then((response) => response.json())
-      .then((data) => setContributions(data));
+      .then((data) => {
+        setContributions(data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -39,18 +45,22 @@ export const OpenSource: FC = () => {
     >
       <Container className="mt-8">
         <div className="flex-column" ref={ref}>
-          <div className="grid grid-cols-2 gap-2">
-            {Object.keys(contributions).map((repoName, i) => {
-              const repositoryContributions = contributions[repoName];
-              return (
-                <Repo
-                  key={i}
-                  repositoryName={repoName}
-                  repositoryContributions={repositoryContributions}
-                />
-              );
-            })}
-          </div>
+          {loading ? (
+            <LoadingSkeleton type="repo" count={6} />
+          ) : (
+            <div className="grid grid-cols-2 gap-2">
+              {Object.keys(contributions).map((repoName, i) => {
+                const repositoryContributions = contributions[repoName];
+                return (
+                  <Repo
+                    key={i}
+                    repositoryName={repoName}
+                    repositoryContributions={repositoryContributions}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </Container>
     </Section>

@@ -1,7 +1,8 @@
 module.exports = {
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+  images: {
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [320, 420, 768, 1024, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
   },
   async rewrites() {
     return [
@@ -20,7 +21,7 @@ module.exports = {
     ];
   },
   // This is required to support PostHog trailing slash API requests
-  trailingSlash: true, 
+  trailingSlash: true,
   async headers() {
     return [
       {

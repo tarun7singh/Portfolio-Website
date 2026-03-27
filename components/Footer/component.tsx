@@ -10,6 +10,7 @@ export const Footer: FC = () => {
           target="_blank"
           className="hover:opacity-80 transition-opacity"
           rel="noreferrer"
+          aria-label="Visit Tarun Singh's GitHub profile"
         >
           Designed & Crafted by Tarun Singh © 2021
         </a>
