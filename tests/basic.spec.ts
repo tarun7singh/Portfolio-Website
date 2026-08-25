@@ -1,11 +1,11 @@
 import { expect, test } from "@playwright/test";
 
 test("has title", async ({ page }) => {
-  await page.goto("https://tarunsingh.dev/");
+  await page.goto("/");
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(
-    /Tarun Singh | Full Stack Developer | Typescript, NodeJS, ReactJS/
+    /Tarun Singh | Senior Software Engineer | AI and Full Stack/
   );
 });
 
@@ -17,7 +17,7 @@ test("validate all links", async ({ page }) => {
     resume: "https://tarunsingh.dev/resume/Resume.pdf",
     email: "mailto:hello@tarunsingh.dev",
   };
-  await page.goto("https://tarunsingh.dev/");
+  await page.goto("/");
   expect(
     await page
       .getByRole("link", { name: "LinkedIn Profile" })
