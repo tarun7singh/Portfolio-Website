@@ -1,6 +1,6 @@
 const siteUrl = "https://tarunsingh.dev";
 
-export default {
+const seo = {
   title: "Tarun Singh | Senior Software Engineer | AI and Full Stack",
   description:
     "Tarun Singh is a Senior Software Engineer building production AI systems and full-stack products with TypeScript, React, Node.js, Laravel, and AWS Bedrock.",
@@ -54,3 +54,5 @@ export default {
     cardType: "summary_large_image",
   },
 };
+
+export default seo;

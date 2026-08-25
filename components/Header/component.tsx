@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Container } from "components";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import useSound from "use-sound";
 

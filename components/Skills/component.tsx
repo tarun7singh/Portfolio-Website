@@ -1,8 +1,6 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { FaAws, FaDocker, FaPhp, FaReact } from "react-icons/fa";
 import {
   SiLangchain,

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { cloneElement, FC } from "react";
+import { cloneElement, FC } from "react";
 
 import { Props } from "./props";
 

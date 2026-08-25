@@ -1,5 +1,5 @@
 import { Container } from "components";
-import React, { FC } from "react";
+import { FC } from "react";
 
 export const Footer: FC = () => {
   return (

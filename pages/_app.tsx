@@ -1,9 +1,9 @@
-import "styles/index.scss";
+import "styles/index.css";
 
 import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { DefaultSeo } from "next-seo";
+import { generateDefaultSeo } from "next-seo/pages";
 import { ThemeProvider } from "next-themes";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
@@ -29,8 +29,8 @@ export default function App({
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-      <DefaultSeo {...SEO} />
       <Head>
+        {generateDefaultSeo(SEO)}
         <link
           rel="apple-touch-icon"
           sizes="180x180"

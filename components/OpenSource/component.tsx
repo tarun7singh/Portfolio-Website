@@ -1,6 +1,6 @@
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { Repo } from "./libs/Repo";

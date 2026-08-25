@@ -8,4 +8,3 @@ packages:
 onlyBuiltDependencies:
   - core-js
   - sharp
-

@@ -3,7 +3,7 @@ import { MediaIcon } from "components";
 import { motion } from "framer-motion";
 import { useHover } from "lib";
 import Image from "next/image";
-import React, { FC } from "react";
+import { FC } from "react";
 import { FaGithub } from "react-icons/fa";
 
 // import { OutIcon } from "../OutIcon";
@@ -103,7 +103,6 @@ export const ProjectCard: FC<Props> = ({
           }}
         />
       </motion.div>
-      {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
       <a
         ref={hoverRef}
         target="_blank"

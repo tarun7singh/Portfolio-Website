@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { GoGitMerge } from "react-icons/go";
 
