@@ -22,15 +22,17 @@ export const Hero: FC = () => {
           <HandWave className="text-4xl md:text-5xl wave" />
         </h1>
         <h1 className="text-2xl font-bold md:mt-8 md:mb-8 md:text-2xl text-black-900 dark:text-white-900 align-right">
-          {"@ Toronto, ON"}
+          {"@ India 🇮🇳"}
         </h1>
       </div>
       <p className="text-xl font-bold tracking-normal md:text-3xl text-black-700 dark:text-white-700">
-        {"Software Engineer"}{" "}
-        <HeroLink title={"RBC"} href="https://rbcroyalbank.com" /> {" & "}{" "}
-        <HeroLink title={"Neuravue"} href="https://neuravue.com" />
+        {"Senior Software Engineer"}{" "}
+        <HeroLink title={"Criteria Corp"} href="https://www.criteriacorp.com" />
         <br />
-        {"Previously Full Stack developer"}{" "}
+        {"Building production AI systems and full-stack products"}
+        <br />
+        {"Previously a Full Stack Developer at"}{" "}
+        <HeroLink title={"RBC"} href="https://rbcroyalbank.com" /> {", "}
         <HeroLink title={"SOTI"} href="https://soti.net" /> {", "}
         <HeroLink title={"Basebuild"} href="https://basebuild.com" /> {" & "}
         <HeroLink title="Kisan Network" href="https://kisannetwork.com" />{" "}
@@ -63,12 +65,12 @@ export const Hero: FC = () => {
       <div className="mt-10">
         <p className="mb-2 text-base md:text-xl dark:text-white-700 text-black-700">
           {
-            "I enjoy creating high-quality software products and projects with a complex logic behind it."
+            "I design and ship reliable software across AI, backend, and frontend systems."
           }
         </p>
         <p className="mb-2 text-base md:text-xl dark:text-white-700 text-black-700">
           {
-            "My technology stack includes NextJS, Angular, React, TypeScript, NodeJS, Express, Golang, MongoDB, PostgreSQL and python."
+            "My current stack includes TypeScript, React, Node.js, PHP/Laravel, AWS Bedrock, LangChain, MCP, MySQL, Redis, and Docker."
           }
         </p>
       </div>

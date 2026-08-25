@@ -25,11 +25,11 @@ const IndexPage = () => {
     <>
       <Head>
         <title>
-          {"Tarun Singh | Full Stack Developer | Typescript, NodeJS, ReactJS"}
+          {"Tarun Singh | Senior Software Engineer | AI and Full Stack"}
         </title>
         <meta
           name="keywords"
-          content="Tarun, Singh, Web developer, Full Stack web developer, Portfolio, Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang, freelancer, toronto"
+          content="Tarun Singh, Senior Software Engineer, AI Engineer, Full Stack Engineer, AWS Bedrock, LangChain, MCP, TypeScript, React, Node.js, Laravel, Toronto"
         />
       </Head>
       <motion.div

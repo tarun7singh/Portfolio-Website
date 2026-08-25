@@ -1,12 +1,12 @@
 export default {
-  title: "Tarun Singh | Full Stack Developer | Typescript, NodeJS, ReactJS",
-  description: "Tarun Singh | Full Stack developer at Toronto, ON, Canada and Freelancer | Skills : Javascript, Typescript, NodeJS, ReactJS, MySQL, MongoDB, Golang",
+  title: "Tarun Singh | Senior Software Engineer | AI and Full Stack",
+  description: "Tarun Singh is a Senior Software Engineer in Toronto building production AI systems and full-stack products with TypeScript, React, Node.js, Laravel, and AWS Bedrock.",
   canonical: "https://www.tarunsingh.dev",
   openGraph: {
     type: "website",
     url: "https://tarusingh.dev",
-    title: "Portfolio | Tarun Singh",
-    description: "Full Stack web developer @ Toronto",
+    title: "Tarun Singh | Senior Software Engineer",
+    description: "Production AI systems and full-stack products built with TypeScript, React, Node.js, Laravel, and AWS Bedrock.",
     images: [
       {
         url: "https://tarunsingh.dev/og.png",

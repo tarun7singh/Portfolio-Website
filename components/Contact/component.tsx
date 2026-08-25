@@ -7,7 +7,7 @@ export const Contact: FC = () => {
       className="mt-20 mb-16 md:mt-28"
       title={"Wanna reach out?"}
       description={
-        "Feel free to drop me a message if you have some interesting offer or you want to hang out."
+        "I am open to conversations about senior engineering, AI, and full-stack opportunities."
       }
     >
       <Container>

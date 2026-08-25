@@ -3,15 +3,18 @@
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
 import React, { FC, useEffect } from "react";
-import { FaReact } from "react-icons/fa";
+import { FaAws, FaDocker, FaPhp, FaReact } from "react-icons/fa";
+import {
+  SiLangchain,
+  SiReactquery,
+  SiRedis,
+  SiVite,
+} from "react-icons/si";
 import { useInView } from "react-intersection-observer";
 
 import {
-  ActionsIcon,
-  GCloudIcon,
-  GoIcon,
-  MongoDBIcon,
   MySQLIcon,
+  McpIcon,
   NodeJSIcon,
   TsIcon,
 } from "./libs/Icons";
@@ -25,15 +28,33 @@ const skills = [
     main: true,
   },
   {
+    name: "React",
+    href: "https://react.dev",
+    icon: <FaReact color="#00D8FF" />,
+    main: true,
+  },
+  {
     name: "Node.js",
     href: "https://nodejs.org",
     icon: <NodeJSIcon />,
     main: true,
   },
   {
-    name: "React",
-    href: "https://reactjs.org",
-    icon: <FaReact color="#00D8FF" />,
+    name: "AWS Bedrock",
+    href: "https://aws.amazon.com/bedrock/",
+    icon: <FaAws color="#FF9900" />,
+    main: true,
+  },
+  {
+    name: "PHP / Laravel",
+    href: "https://laravel.com",
+    icon: <FaPhp color="#777BB4" />,
+    main: true,
+  },
+  {
+    name: "MCP / Agentic AI",
+    href: "https://modelcontextprotocol.io",
+    icon: <McpIcon />,
     main: true,
   },
   {
@@ -43,27 +64,33 @@ const skills = [
     main: true,
   },
   {
-    name: "MongoDB",
-    href: "https://www.mongodb.com",
-    icon: <MongoDBIcon />,
+    name: "Docker",
+    href: "https://www.docker.com",
+    icon: <FaDocker color="#2496ED" />,
     main: true,
   },
   {
-    name: "Google Cloud",
-    href: "https://cloud.google.com",
-    icon: <GCloudIcon />,
+    name: "LangChain",
+    href: "https://www.langchain.com",
+    icon: <SiLangchain color="#1C3C3C" />,
     main: true,
   },
   {
-    name: "Github Actions",
-    href: "https://github.com/features/actions",
-    icon: <ActionsIcon />,
-    main: false,
+    name: "TanStack Query",
+    href: "https://tanstack.com/query",
+    icon: <SiReactquery color="#FF4154" />,
+    main: true,
   },
   {
-    name: "Golang",
-    href: "https://golang.org",
-    icon: <GoIcon />,
+    name: "Redis",
+    href: "https://redis.io",
+    icon: <SiRedis color="#DC382D" />,
+    main: true,
+  },
+  {
+    name: "Vite",
+    href: "https://vite.dev",
+    icon: <SiVite color="#646CFF" />,
     main: true,
   },
 ];
