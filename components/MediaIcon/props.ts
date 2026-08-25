@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import { HTMLAttributes } from "react";
 
 export type Props = HTMLAttributes<HTMLAnchorElement> & {
   icon: React.ReactElement;

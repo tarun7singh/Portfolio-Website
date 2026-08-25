@@ -1,6 +1,5 @@
 import { Container, Layout } from "components";
 import Head from "next/head";
-import React from "react";
 
 const PrivacyPage = () => {
   return (

@@ -10,7 +10,7 @@ import {
 } from "components";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const siteUrl = "https://tarunsingh.dev";
 

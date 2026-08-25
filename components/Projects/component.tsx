@@ -1,6 +1,6 @@
 import { Container, Section } from "components";
 import { motion } from "framer-motion";
-import React, { FC } from "react";
+import { FC } from "react";
 import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 
 const supportingProjects = [

@@ -1,7 +1,7 @@
 import { Container, Section } from "components";
 import { useAnimation } from "framer-motion";
 import { useMdScreen } from "lib";
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { Item } from "./libs/Item";

@@ -1,5 +1,7 @@
-import { AnimationControls } from "framer-motion";
+import { useAnimationControls } from "framer-motion";
 import { HTMLAttributes } from "react";
+
+type AnimationControls = ReturnType<typeof useAnimationControls>;
 
 export type Props = HTMLAttributes<HTMLDivElement> & {
   title: string;

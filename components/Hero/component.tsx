@@ -1,6 +1,6 @@
 import { Container, MediaIcon } from "components";
 import Image from "next/image";
-import React, { FC } from "react";
+import { FC } from "react";
 import { FaFilePdf, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import { HandWave } from "./libs/HandWave";

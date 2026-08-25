@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import React, { FC } from "react";
+import { FC } from "react";
 
 import { Props } from "./props";
 
