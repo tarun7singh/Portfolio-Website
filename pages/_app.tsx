@@ -3,12 +3,9 @@ import "styles/index.css";
 import { Layout } from "components";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { generateDefaultSeo } from "next-seo/pages";
 import { ThemeProvider } from "next-themes";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
-
-import SEO from "../next-seo.config";
 
 if (typeof window !== "undefined") {
   // checks that we are client-side
@@ -30,7 +27,6 @@ export default function App({
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <Head>
-        {generateDefaultSeo(SEO)}
         <link
           rel="apple-touch-icon"
           sizes="180x180"

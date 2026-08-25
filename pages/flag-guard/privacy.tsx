@@ -1,15 +1,28 @@
 import { Container, Layout } from "components";
 import Head from "next/head";
 
+const siteUrl = "https://tarunsingh.dev";
+const pageUrl = `${siteUrl}/flag-guard/privacy/`;
+const pageTitle = "Privacy Policy | Tarun Singh";
+const pageDescription =
+  "Privacy Policy for Flag Guard - VPN & IP Location Verifier browser extension developed by Tarun Singh";
+
 const PrivacyPage = () => {
   return (
     <>
       <Head>
-        <title>Privacy Policy | Tarun Singh</title>
-        <meta
-          name="description"
-          content="Privacy Policy for Flag Guard - VPN & IP Location Verifier browser extension developed by Tarun Singh"
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={pageUrl} />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:site_name" content="Tarun Singh" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
       </Head>
       <Layout>
         <Container>

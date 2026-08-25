@@ -13,7 +13,7 @@ export const Hero: FC = () => {
         src="/images/me.webp"
         width="160"
         height="160"
-        alt="me"
+        alt="Tarun Singh, Senior Software Engineer"
         className="w-40 h-40 border border-gray-700 rounded-full mt-28 md:w-34 md:h-34"
       />
       <div className="flex">
@@ -21,9 +21,9 @@ export const Hero: FC = () => {
           {"Hi, I'm Tarun!"}
           <HandWave className="text-4xl md:text-5xl wave" />
         </h1>
-        <h1 className="text-2xl font-bold md:mt-8 md:mb-8 md:text-2xl text-black-900 dark:text-white-900 align-right">
+        <span className="text-2xl font-bold md:mt-8 md:mb-8 md:text-2xl text-black-900 dark:text-white-900 align-right">
           {"@ India 🇮🇳"}
-        </h1>
+        </span>
       </div>
       <p className="text-xl font-bold tracking-normal md:text-3xl text-black-700 dark:text-white-700">
         {"Senior Software Engineer"}{" "}
@@ -58,7 +58,7 @@ export const Hero: FC = () => {
         />
         <MediaIcon
           icon={<FaFilePdf className="w-6 h-6 md:w-7 md:h-7" />}
-          href="https://tarunsingh.dev/resume/Resume.pdf"
+          href="/Resume.pdf"
           ariaLabel="Resume-PDF"
         />
       </div>

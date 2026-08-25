@@ -14,7 +14,7 @@ test("validate all links", async ({ page }) => {
     linkedIn: "https://www.linkedin.com/in/tarun7singh/",
     github: "https://github.com/tarun7singh",
     twitter: "https://twitter.com/tarun7singh",
-    resume: "https://tarunsingh.dev/resume/Resume.pdf",
+    resume: "/Resume.pdf",
     email: "mailto:hello@tarunsingh.dev",
   };
   await page.goto("/");
@@ -41,4 +41,29 @@ test("validate all links", async ({ page }) => {
       .getByRole("link", { name: "hello@tarunsingh.dev" })
       .getAttribute("href")
   ).toEqual(validLinks.email);
+});
+
+test("has one canonical homepage heading and no duplicate SEO tags", async ({
+  page,
+}) => {
+  await page.goto("/");
+
+  await expect(page.locator("h1")).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
+  await expect(page.locator('meta[name="description"]')).toHaveCount(1);
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(1);
+});
+
+test("privacy page has page-specific SEO metadata", async ({ page }) => {
+  await page.goto("/flag-guard/privacy/");
+
+  await expect(page).toHaveTitle("Privacy Policy | Tarun Singh");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    "https://tarunsingh.dev/flag-guard/privacy/"
+  );
+  await expect(page.locator('meta[property="og:title"]')).toHaveAttribute(
+    "content",
+    "Privacy Policy | Tarun Singh"
+  );
 });

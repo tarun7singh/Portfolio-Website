@@ -44,12 +44,12 @@ export const Header: FC = () => {
     >
       <Container className="flex items-center justify-between w-auto py-2 md:py-4 text-black-900 dark:text-white-900">
         <Link href="/" passHref>
-          <h1
+          <span
             style={{ fontFamily: "tangerine" }}
             className="text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900"
           >
             Tarun Singh
-          </h1>
+          </span>
         </Link>
         <div className="flex items-center">
           <button
