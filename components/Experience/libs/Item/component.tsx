@@ -30,7 +30,7 @@ export const Item: FC<Props> = ({
       animate={controls}
       custom={custom}
     >
-      {!last && (
+      {!last && place !== "SOTI Inc" && (
         <div
           className="absolute h-20 top-14 w-0.5 dark:bg-white-300 bg-white-700"
           style={{ left: "0.2rem" }}
