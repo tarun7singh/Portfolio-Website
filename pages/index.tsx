@@ -72,6 +72,11 @@ const IndexPage = () => {
                 url: siteUrl,
                 image: `${siteUrl}/images/me.webp`,
                 jobTitle: "Senior Software Engineer",
+                worksFor: {
+                  "@type": "Organization",
+                  name: "Criteria Corp",
+                  url: "https://www.criteriacorp.com",
+                },
                 description:
                   "Senior Software Engineer building production AI systems and full-stack products.",
                 sameAs: [

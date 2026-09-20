@@ -2,10 +2,25 @@ import "styles/index.css";
 
 import { Layout } from "components";
 import { AppProps } from "next/app";
+import { Rubik, Tangerine } from "next/font/google";
 import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-rubik",
+  display: "swap",
+});
+
+const tangerine = Tangerine({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-tangerine",
+  display: "swap",
+});
 
 if (typeof window !== "undefined") {
   // checks that we are client-side
@@ -50,11 +65,13 @@ export default function App({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Layout>
-        <PostHogProvider client={posthog}>
-          <Component {...pageProps} />
-        </PostHogProvider>
-      </Layout>
+      <div className={`${rubik.variable} ${tangerine.variable}`}>
+        <Layout>
+          <PostHogProvider client={posthog}>
+            <Component {...pageProps} />
+          </PostHogProvider>
+        </Layout>
+      </div>
     </ThemeProvider>
   );
 }
