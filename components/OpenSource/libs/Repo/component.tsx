@@ -28,7 +28,11 @@ export const Repo: FC<Props> = ({
     <div className={clsx(className && className, "flex mt-4 mb-4")}>
       <FaGithub className="md:w-7 md:h-7" />
       <div className="ml-4">
-        <a href={repositoryContributions[0].repository_url} target="__blank__">
+        <a
+          href={repositoryContributions[0].repository_url}
+          target="_blank"
+          rel="noreferrer"
+        >
           <span className="text-lg font-medium text-blue-700 capitalize">
             {repositoryName}
           </span>
@@ -41,7 +45,12 @@ export const Repo: FC<Props> = ({
                   className="mr-2 md:w-4 md:h-6"
                   style={{ color: "#9054F5" }}
                 />
-                <a href={contribution.url} target="__blank__" className="">
+                <a
+                  href={contribution.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className=""
+                >
                   <span className="text-base capitalize border-b-2 border-dotted">
                     {contribution.title}
                   </span>

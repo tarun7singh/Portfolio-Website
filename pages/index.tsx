@@ -8,21 +8,11 @@ import {
   Projects,
   Skills,
 } from "components";
-import { motion } from "framer-motion";
 import Head from "next/head";
-import { useEffect, useState } from "react";
 
 const siteUrl = "https://tarunsingh.dev";
 
 const IndexPage = () => {
-  const [main, setMain] = useState(false);
-
-  useEffect(() => {
-    const ids = [setTimeout(() => setMain(true), 500)];
-
-    return () => ids.forEach((id) => clearTimeout(id));
-  }, []);
-
   return (
     <>
       <Head>
@@ -49,6 +39,9 @@ const IndexPage = () => {
           content="Production AI systems and full-stack products built with TypeScript, React, Node.js, Laravel, and AWS Bedrock."
         />
         <meta property="og:image" content={`${siteUrl}/og.png`} />
+        <meta property="og:image:width" content="980" />
+        <meta property="og:image:height" content="771" />
+        <meta property="og:image:type" content="image/png" />
         <meta
           property="og:image:alt"
           content="Tarun Singh, Senior Software Engineer"
@@ -103,32 +96,16 @@ const IndexPage = () => {
           }}
         />
       </Head>
-      <motion.div
-        variants={{
-          initial: {
-            opacity: 0,
-            display: "none",
-          },
-          visible: {
-            opacity: 1,
-            display: "block",
-          },
-        }}
-        initial="initial"
-        animate={main ? "visible" : "initial"}
-        transition={{
-          duration: 1.0,
-        }}
-      >
-        <Header />
+      <Header />
+      <main id="content">
         <Hero />
         <Skills />
         <OpenSource />
         <Experience />
         <Projects />
         <Contact />
-        <Footer />
-      </motion.div>
+      </main>
+      <Footer />
     </>
   );
 };

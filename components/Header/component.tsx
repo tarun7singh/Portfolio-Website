@@ -36,7 +36,7 @@ export const Header: FC = () => {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div
+    <header
       className={clsx(
         "fixed z-10 w-full opacity-90 bg-lightTheme dark:bg-darkTheme transition-top duration-300",
         visible ? "top-0" : "-top-28"
@@ -70,6 +70,6 @@ export const Header: FC = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </header>
   );
 };

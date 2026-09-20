@@ -15,13 +15,14 @@ export const Hero: FC = () => {
         height="160"
         alt="Tarun Singh, Senior Software Engineer"
         className="w-40 h-40 border border-gray-700 rounded-full mt-28 md:w-34 md:h-34"
+        priority
       />
-      <div className="flex">
-        <h1 className="flex-grow mt-6 mb-6 text-4xl font-bold md:mt-8 md:mb-8 md:text-5xl text-black-900 dark:text-white-900">
-          {"Hi, I'm Tarun!"}
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 mt-6 mb-6 md:mt-8 md:mb-8">
+        <h1 className="text-4xl font-bold md:text-5xl text-black-900 dark:text-white-900">
+          {"Hi, I'm Tarun Singh!"}
           <HandWave className="text-4xl md:text-5xl wave" />
         </h1>
-        <span className="text-2xl font-bold md:mt-8 md:mb-8 md:text-2xl text-black-900 dark:text-white-900 align-right">
+        <span className="text-xl sm:text-2xl font-bold text-black-900 dark:text-white-900 text-right shrink-0 whitespace-nowrap">
           {"@ India 🇮🇳"}
         </span>
       </div>
