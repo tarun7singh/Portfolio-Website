@@ -47,7 +47,8 @@ module.exports = {
         top: "top",
       },
       fontFamily: {
-        sans: ["Rubik", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-rubik)", "Rubik", ...defaultTheme.fontFamily.sans],
+        tangerine: ["var(--font-tangerine)", "Tangerine", "cursive"],
       },
       fontSize: {
         "5xl": "2.8125rem",

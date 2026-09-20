@@ -29,10 +29,15 @@ export const Skill: FC<Props> = ({
           y: -3,
         },
       }}
+      aria-label={name}
       animate={controls}
       custom={custom}
     >
-      {cloneElement(icon, { className: "mx-auto w-9 h-9" })}
+      {cloneElement(icon, {
+        className: "mx-auto w-9 h-9",
+        "aria-label": `${name} logo`,
+        title: name,
+      })}
       <p className="mt-2 text-base font-medium text-black-700 dark:text-white-700">
         {name}
       </p>
