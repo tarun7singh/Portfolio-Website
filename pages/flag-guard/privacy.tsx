@@ -1,4 +1,4 @@
-import { Container, Layout } from "components";
+import { Container } from "components";
 import Head from "next/head";
 
 const siteUrl = "https://tarunsingh.dev";
@@ -24,7 +24,7 @@ const PrivacyPage = () => {
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
       </Head>
-      <Layout>
+      <main id="content">
         <Container>
           <div className="py-16 px-4 max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-center">
@@ -153,7 +153,7 @@ const PrivacyPage = () => {
             </div>
           </div>
         </Container>
-      </Layout>
+      </main>
     </>
   );
 };

@@ -41,8 +41,8 @@ const seo = {
     images: [
       {
         url: `${siteUrl}/og.png`,
-        width: 800,
-        height: 600,
+        width: 980,
+        height: 771,
         alt: "Tarun Singh, Senior Software Engineer",
       },
     ],
